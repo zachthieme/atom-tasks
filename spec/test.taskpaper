@@ -1,0 +1,9 @@
+Project With No Space on End:
+  - task with no tag
+  - task with tag @today
+  - task with multiple tags @today @due
+
+Project With Spaces on End:
+
+Archive:
+  - item that is archived.

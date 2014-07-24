@@ -3,11 +3,9 @@
   'cmd-shift-d': 'tasks:complete'
   'cmd-shift-a': 'tasks:archive'
   'cmd-shift-c': 'tasks:cancel'
-  'ctrl-enter' : 'tasks:addnote'
 
 '.platform-win32 .workspace .editor:not(.mini).task-list, .platform-linux .workspace .editor:not(.mini).task-list':
   'ctrl-shift-enter': 'tasks:add'
   'ctrl-shift-d': 'tasks:complete'
   'ctrl-shift-a': 'tasks:archive'
   'ctrl-shift-c': 'tasks:cancel'
-  'ctrl-enter' : 'tasks:addnote'

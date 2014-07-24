@@ -102,7 +102,7 @@ module.exports =
     g.patterns = mat g.patterns
 
     # first, clear existing grammar
-    atom.syntax.removeGrammarForScopeName 'source.todo'
+    atom.syntax.removeGrammarForScopeName 'source.task'
     newG = new Grammar atom.syntax, g
     atom.syntax.addGrammar newG
 

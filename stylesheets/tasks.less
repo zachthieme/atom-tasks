@@ -1,13 +1,14 @@
 @import "ui-variables";
 
 .editor {
-  .tasks {
+  .project {
+    color: @text-color-warning;
+  }
+  .task {
 
-    &.header { color: @text-color-warning; }
+    &.task { color: #FFF; }
 
-    &.text { color: #FFF; }
-
-    &.task { color: @text-color-subtle; }
+    &.note { color: lighten(@text-color-subtle, 20%); }
 
     &.marker { color: @text-color; }
 
