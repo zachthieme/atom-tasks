@@ -142,7 +142,7 @@ module.exports =
     editor = atom.workspace.getActiveEditor()
     editor.transact ->
       editor.moveCursorToEndOfLine()
-      todayText = "@due(#{moment().format(atom.config.get('tasks.dateFormat'))})"
+      todayText = " @due(#{moment().format(atom.config.get('tasks.dateFormat'))})"
       editor.insertText todayText
 
 
