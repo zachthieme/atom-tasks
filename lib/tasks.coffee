@@ -65,11 +65,13 @@ module.exports =
 
     @updateGrammar()
 
-    atom.workspaceView.command "tasks:add", => @newTask()
-    atom.workspaceView.command "tasks:complete", => @completeTask()
-    atom.workspaceView.command "tasks:archive", => @tasksArchive()
-    atom.workspaceView.command "tasks:updateTimestamps", => @tasksUpdateTimestamp()
-    atom.workspaceView.command "tasks:cancel", => @cancelTask()
+    atom.workspaceView.command "tasks:add-new-task", => @newTask()
+    atom.workspaceView.command "tasks:mar-task-complete", => @completeTask()
+    atom.workspaceView.command "tasks:archive-task", => @tasksArchive()
+    atom.workspaceView.command "tasks:update-time-stamps", => @tasksUpdateTimestamp()
+    atom.workspaceView.command "tasks:cancel-task", => @cancelTask()
+    atom.workspaceView.command "tasks:add-new-project", => @newProject()
+    atom.workspaceView.command "tasks:tag-with-today", => @newToday()
 
     atom.workspaceView.eachEditorView (editorView) ->
       path = editorView.getEditor().getPath()
@@ -127,6 +129,22 @@ module.exports =
       editor.insertNewlineBelow()
       # should have a minimum of one tab in
       editor.insertText indentLevel + atom.config.get('tasks.baseMarker') + ' '
+
+  newProject: ->
+    editor = atom.workspace.getActiveEditor()
+    editor.transact ->
+      editor.insertNewlineBelow()
+      editor.insertText 'New Project:'
+      editor.moveCursorLeft()
+      editor.selectToFirstCharacterOfLine()
+
+  newToday: ->
+    editor = atom.workspace.getActiveEditor()
+    editor.transact ->
+      editor.moveCursorToEndOfLine()
+      todayText = "@due(#{moment().format(atom.config.get('tasks.dateFormat'))})"
+      editor.insertText todayText
+
 
   completeTask: ->
     editor = atom.workspace.getActiveEditor()

@@ -1,11 +1,18 @@
 '.platform-darwin .workspace .editor:not(.mini).task-list':
-  'cmd-shift-enter': 'tasks:add'
-  'cmd-shift-d': 'tasks:complete'
-  'cmd-shift-a': 'tasks:archive'
-  'cmd-shift-c': 'tasks:cancel'
+  'shift-enter': 'tasks:add-new-task'
+  'ctrl-enter': 'tasks:add-new-project'
+  'ctrl-\\':'tasks:move-to-project'
+  'ctrl-shift-d': 'tasks:mark-task-complete'
+  'ctrl-shift-a': 'tasks:archive-task'
+  'ctrl-shift-c': 'tasks:cancel-task'
+  'ctrl-shift-y': 'tasks:tag-with-today'
+  
 
 '.platform-win32 .workspace .editor:not(.mini).task-list, .platform-linux .workspace .editor:not(.mini).task-list':
-  'ctrl-shift-enter': 'tasks:add'
-  'ctrl-shift-d': 'tasks:complete'
-  'ctrl-shift-a': 'tasks:archive'
-  'ctrl-shift-c': 'tasks:cancel'
+  'shift-enter': 'tasks:add-new-task'
+  'ctrl-enter': 'tasks:add-new-project'
+  'ctrl-\\':'tasks:move-to-project'
+  'ctrl-shift-d': 'tasks:mark-task-complete'
+  'ctrl-shift-a': 'tasks:archive-task'
+  'ctrl-shift-c': 'tasks:cancel-task'
+  'ctrl-shift-y': 'tasks:tag-with-today'
