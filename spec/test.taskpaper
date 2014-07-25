@@ -2,8 +2,9 @@ Project With No Space on End:
   - task with no tag
   - task with tag @today
   - task with multiple tags @today @due
+    this is a note
 
-Project With Spaces on End:
+Project With Spaces on End: 
 
 Archive:
-  - item that is archived.
+  - item that is archived. @done(2014-07-02)
